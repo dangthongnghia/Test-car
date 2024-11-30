@@ -25,8 +25,8 @@ function App() {
             <Route path="/rental-history" element={<RentalHistory />} />
             <Route path="/cars" element={<CarList cars={cars} />} />
             <Route path="/car/:id" element={<CarDetails />} />
-          <Footer />
           </Routes>
+          <Footer />
         </div>
       </CarProvider>
     </>
