@@ -18,7 +18,6 @@ function App() {
       <CarProvider>
         <div>
           <Navbar />
-          <Footer />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/rent" element={<RentCars />} />
@@ -26,6 +25,7 @@ function App() {
             <Route path="/rental-history" element={<RentalHistory />} />
             <Route path="/cars" element={<CarList cars={cars} />} />
             <Route path="/car/:id" element={<CarDetails />} />
+          <Footer />
           </Routes>
         </div>
       </CarProvider>
