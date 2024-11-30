@@ -12,12 +12,11 @@ import cars from "./data/cars"; // Dữ liệu mẫu cho danh sách xe
 import 'bootstrap/dist/css/bootstrap.min.css'; // Bootstrap cho giao diện
 import Footer from './components/Footer'; // Import Footer component
 
-function App() {
+const App = () => {
   return (
     <>
-      <CarProvider>
-        
-        <div>
+      <CarProvider> 
+
           <Navbar /> {/* Thanh điều hướng */}
           <Footer />
           <Routes>
@@ -26,15 +25,12 @@ function App() {
             <Route path="/rent" element={<RentCars />} />
             <Route path="/inventory" element={<CarInventory />} />
             <Route path="/rental-history" element={<RentalHistory />} />
-            <Route 
-              path="/cars" 
-              element={<CarList cars={cars} />} // Sử dụng CarList tại một route riêng
-            />
+            { <Route path="/cars" element={<CarList cars={cars} />}   />  /*Sử dụng CarList tại một route riêng */}
             <Route path="/car/:id" element={<CarDetails />} /> {/* Route chi tiết xe */}
           </Routes>
-        </div>
       </CarProvider>
-    </>
+          </>
+
   );
 }
 
